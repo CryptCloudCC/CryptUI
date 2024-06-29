@@ -8,6 +8,6 @@ import DashboardIndex from '@/pages/dashboard/DashboardIndex.vue';
 </script>
 
 <template>
-
+    <DashboardIndex />
 </template>
 

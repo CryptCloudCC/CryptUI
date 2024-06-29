@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import CaretSortIcon from '~icons/radix-icons/caret-sort'
-import CheckIcon from '~icons/radix-icons/check'
-import PlusCircledIcon from '~icons/radix-icons/plus-circled'
+import CaretSortIcon from '@radix-icons/vue'
+import CheckIcon from '@radix-icons/vue'
+import { PlusCircledIcon } from '@radix-icons/vue'
 
 import { cn } from '@/lib/utils'
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from '@/lib/registry/new-york/ui/avatar'
-import { Button } from '@/lib/registry/new-york/ui/button'
+} from '@/components/ui/avatar'
+import { Button } from '@/components/ui/button'
 
 import {
   Dialog,
@@ -20,22 +20,22 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@/lib/registry/new-york/ui/dialog'
-import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandSeparator } from '@/lib/registry/new-york/ui/command'
-import { Input } from '@/lib/registry/new-york/ui/input'
-import { Label } from '@/lib/registry/new-york/ui/label'
+} from '@/components/ui/dialog'
+import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandSeparator } from '@/components/ui/command'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from '@/lib/registry/new-york/ui/popover'
+} from '@/components/ui/popover'
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/lib/registry/new-york/ui/select'
+} from '@/components/ui/select'
 
 const groups = [
   {
@@ -92,7 +92,7 @@ const selectedTeam = ref<Team>(groups[0].teams[0])
         </Button>
       </PopoverTrigger>
       <PopoverContent class="w-[200px] p-0">
-        <Command :filter-function="(list, term) => list.filter(i => i.label?.toLowerCase()?.includes(term)) ">
+        <Command :filter-function="(list: any[], term: any) => list.filter(i => i.label?.toLowerCase()?.includes(term)) ">
           <CommandList>
             <CommandInput placeholder="Search team..." />
             <CommandEmpty>No team found.</CommandEmpty>
@@ -193,4 +193,4 @@ const selectedTeam = ref<Team>(groups[0].teams[0])
       </DialogFooter>
     </DialogContent>
   </Dialog>
-</template>
+</template>: any[]: any(: { label: string }): any[]: any(: { label: string })

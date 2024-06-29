@@ -5,13 +5,13 @@ import { CalendarDate, DateFormatter, getLocalTimeZone } from '@internationalize
 
 import { type Ref, ref } from 'vue'
 import { cn } from '@/lib/utils'
-import { Button } from '@/lib/registry/new-york/ui/button'
-import { RangeCalendar } from '@/lib/registry/new-york/ui/range-calendar'
+import { Button } from '@/components/ui/button'
+import { RangeCalendar } from '@/components/ui/range-calendar'
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from '@/lib/registry/new-york/ui/popover'
+} from '@/components/ui/popover'
 
 const df = new DateFormatter('en-US', {
   dateStyle: 'medium',
