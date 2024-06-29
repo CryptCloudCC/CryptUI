@@ -1,26 +1,26 @@
 <script setup lang="ts">
-import DashboardOverview from '@/components/dashboard/DashboardOverview'
-import DateRangePicker from '@/components/DateRangePicker.vue'
-import MainNav from '@/components/MainNav.vue'
-import RecentSales from '@/components/RecentSales.vue'
-import Search from '@/components/Search.vue'
-import TeamSwitcher from '@/components/TeamSwitcher.vue'
-import UserNav from '@/components/UserNav.vue'
+import DashboardOverview from '@/components/dashboard/DashboardOverview.vue'
+import DateRangePicker from '@/components/dashboard/DateRangePicker.vue'
+import MainNav from '@/components/dashboard/MainNav.vue'
+import RecentSales from '@/components/dashboard/RecentSales.vue'
+import Search from '@/components/dashboard/Search.vue'
+import TeamSwitcher from '@/components/dashboard/TeamSwitcher.vue'
+import UserNav from '@/components/dashboard/UserNav.vue'
 
-import { Button } from '@/lib/registry/new-york/ui/button'
+import { Button } from '@/components/ui/button'
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/lib/registry/new-york/ui/card'
+} from '@/components/ui/card'
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from '@/lib/registry/new-york/ui/tabs'
+} from '@/components/ui/tabs'
 </script>
 
 <template>
