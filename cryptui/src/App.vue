@@ -8,9 +8,13 @@
 // Import Pages
 import DashboardIndex from '@/pages/dashboard/DashboardIndex.vue';
 
+// if the user is not authenticated, redirect to `cryptui/src/pages/auth/AuthLayout.vue`
+
 </script>
 
 <template>
+
+    
     <DashboardIndex />
 </template>
 

@@ -3,6 +3,24 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+// Import SDKs
+import { Surreal, RecordId, Table } from 'surrealdb.js';
+
+const surrealDbInstance = new Surreal();
+
+async function AuthenticateUserWithSurrealDB(surrealDbInstance: any, username: string, password: string) {
+
+    try {
+        await surrealDbInstance.connect("http://127.0.0.1:8000/rpc"); // Adjust URL as per your SurrealDB setup
+        await surrealDbInstance.use({ namespace: "test", database: "test" }); // Optional: Select namespace/database
+        await surrealDbInstance.signin({ username: username, password: password }); // Sign in if required
+        console.log("Authenticated with SurrealDB");
+    } catch (error) {
+        console.error("Error connecting to SurrealDB:", error);
+    }
+
+
+}
 </script>
 
 <template>
