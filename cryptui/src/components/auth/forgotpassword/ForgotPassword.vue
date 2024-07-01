@@ -1,28 +1,27 @@
 <script setup lang="ts">
-    import Dialog from '@/components/ui/dialog/Dialog.vue'
-    
+import Dialog from '@/components/ui/dialog/Dialog.vue'
+
 </script>
 
 
 <template>
-<Dialog>
+      <Dialog>
     <DialogTrigger>
-      Login
+      Forgot Password
     </DialogTrigger>
     <DialogContent>
       <DialogHeader>
-        <DialogTitle>Login to CryptHub</DialogTitle>
+        <DialogTitle>Forgot Password</DialogTitle>
         <DialogDescription>
-          Use your CryptHub account credentials to login.
+          Enter your email address and we will send you a link to reset your password.
         </DialogDescription>
       </DialogHeader>
 
       <DialogFooter>
         <Button variant="outline">
-          Login
+          Forgot Password
         </Button>
       </DialogFooter>
     </DialogContent>
-</Dialog>
-
+  </Dialog>
 </template>

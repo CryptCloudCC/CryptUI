@@ -5,24 +5,25 @@
 
 
 <template>
-<Dialog>
+  <Dialog>
     <DialogTrigger>
-      Login
+      Register
     </DialogTrigger>
     <DialogContent>
       <DialogHeader>
-        <DialogTitle>Login to CryptHub</DialogTitle>
+        <DialogTitle>Register with CryptHub</DialogTitle>
         <DialogDescription>
-          Use your CryptHub account credentials to login.
+          Create a new CryptHub account.
         </DialogDescription>
       </DialogHeader>
 
       <DialogFooter>
         <Button variant="outline">
-          Login
+          Register
         </Button>
       </DialogFooter>
     </DialogContent>
-</Dialog>
+  </Dialog>
+
 
 </template>

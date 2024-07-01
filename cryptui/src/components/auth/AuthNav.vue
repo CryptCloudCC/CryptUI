@@ -8,6 +8,11 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog'
+import { Button } from '@/components/ui/button'
+import ForgotPassword from '@/pages/auth/ForgotPassword.vue';
+import Register from '@/pages/auth/Register.vue';
+import Login from '@/pages/auth/Login.vue';
+
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -26,48 +31,24 @@ import {
       <NavigationMenuItem>
         <NavigationMenuTrigger>Login</NavigationMenuTrigger>
         <NavigationMenuContent>
-          <NavigationMenuLink></NavigationMenuLink>
+          <NavigationMenuLink>
+            <RouterLink to="/login">
+                Login
+            </RouterLink>
+          </NavigationMenuLink>
+
         </NavigationMenuContent>
       </NavigationMenuItem>
+      <NavigationMenuItem>
+        <NavigationMenuTrigger>Register</NavigationMenuTrigger>
+        <NavigationMenuContent>
+          <NavigationMenuLink>
+            <RouterLink to="/register">
+                Register
+            </RouterLink>
+          </NavigationMenuLink>
     </NavigationMenuList>
   </NavigationMenu>
   
-  <Dialog>
-    <DialogTrigger>
-      Register
-    </DialogTrigger>
-    <DialogContent>
-      <DialogHeader>
-        <DialogTitle>Register with CryptHub</DialogTitle>
-        <DialogDescription>
-          Create a new CryptHub account.
-        </DialogDescription>
-      </DialogHeader>
 
-      <DialogFooter>
-        <Button variant="outline">
-          Register
-        </Button>
-      </DialogFooter>
-    </DialogContent>
-  </Dialog>
-  <Dialog>
-    <DialogTrigger>
-      Forgot Password
-    </DialogTrigger>
-    <DialogContent>
-      <DialogHeader>
-        <DialogTitle>Forgot Password</DialogTitle>
-        <DialogDescription>
-          Enter your email address and we will send you a link to reset your password.
-        </DialogDescription>
-      </DialogHeader>
-
-      <DialogFooter>
-        <Button variant="outline">
-          Forgot Password
-        </Button>
-      </DialogFooter>
-    </DialogContent>
-  </Dialog>
 </template>
